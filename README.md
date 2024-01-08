@@ -14,7 +14,7 @@ In this DIY weather monitoring project, a Raspberry Pi and NodeMCU (ESP8266) are
     - Connect DHT11 or DHT22 for temperature and humidity to the Raspberry Pi.
     - Optionally, connect BMP180 or BMP280 for atmospheric pressure.
 - NodeMCU Programming:
-  Install Arduino IDE and add ESP8266 board support.
+      Install Arduino IDE and add ESP8266 board support.
 Write a program to read sensor data using the NodeMCU.
 Upload the program to the NodeMCU.
 MQTT Communication (Optional):

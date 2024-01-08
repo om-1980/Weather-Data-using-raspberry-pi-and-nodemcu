@@ -18,27 +18,40 @@ In this DIY weather monitoring project, a Raspberry Pi and NodeMCU (ESP8266) are
     - Install libraries like PubSubClient by Nick O'Leary and DHT sensor Library by Adafruit
     - Now, paste the code to read sensor data using the NodeMCU.
     - Upload the program to the NodeMCU.
-MQTT Communication (Optional):
+- MQTT Communication:
+    - Install an MQTT broker like Mosquitto on the Raspberry Pi.
+          - Update Package List:
+          ```
+              sudo apt update
+          ```
+          - Install Mosquitto:
+          ```
+              sudo apt install -y mosquitto
+          ```
+          - Start Mosquitto Service:
+          ```
+              sudo systemctl start mosquitto
+          ```
+          - Enable Mosquitto Service to Start on Boot:
+          ```
+              sudo systemctl enable mosquitto
+          ```
+          - Verify Mosquitto Installation:
+          ```
+              sudo systemctl status mosquitto
+          ```
+# Data Display or Storage:
+- Create a local web server on the Raspberry Pi to display sensor data.
+- Optionally, store data in a database for analysis.
+- Consider using IoT platforms like ThingSpeak or Blynk for visualization.
+  
+# Power Considerations:
+- Ensure stable power supply for both Raspberry Pi and NodeMCU.
 
-Install an MQTT broker like Mosquitto on the Raspberry Pi.
-Modify NodeMCU program to publish sensor data to the MQTT broker.
-Write a Python script on the Raspberry Pi to subscribe to MQTT topics and receive the data.
-Data Display or Storage:
+# Security Considerations:
+- Implement security measures, such as HTTPS for the web server and username/password for MQTT for remote access.
+  
+# Testing:
+- Thoroughly test the setup to ensure accurate sensor readings and stable communication.
+  
 
-Create a local web server on the Raspberry Pi to display sensor data.
-Optionally, store data in a database for analysis.
-Consider using IoT platforms like ThingSpeak or Blynk for visualization.
-Power Considerations:
-
-Ensure stable power supply for both Raspberry Pi and NodeMCU.
-Consider external power sources or batteries if needed.
-Security Considerations:
-
-Implement security measures, such as HTTPS for the web server and username/password for MQTT, for remote access.
-Testing:
-
-Thoroughly test the setup to ensure accurate sensor readings and stable communication.
-Documentation and Compliance:
-
-Document your setup and configurations.
-Adhere to legal and regulatory requirements in your region.
